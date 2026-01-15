@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demande de devis – LS Pictures Prod (Version de travail)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <div class="brand"><span class="dot"></span> LS Pictures Prod <span class="badge">Version de travail</span></div>
+      <nav class="menu">
+        <a href="./index.html">Accueil</a>
+        <a href="./services.html">Services</a>
+        <a href="./devis.html">Demander un devis</a>
+      </nav>
+    </header>
+
+    <section style="padding:34px 0 10px">
+      <h1 class="h1" style="font-size:38px">Demande de devis</h1>
+      <p class="p">Formulaire volontairement simple. Paiement après devis (acompte ou total selon le projet).</p>
+    </section>
+
+    <section class="card">
+      <!-- Maquette : on simule l'envoi en redirigeant vers la page confirmation -->
+      <form action="./confirmation.html" method="GET">
+        <label for="nom">Nom</label>
+        <input id="nom" name="nom" placeholder="Votre nom" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="vous@exemple.com" required />
+
+        <label for="type">Type de projet</label>
+        <select id="type" name="type" required>
+          <option value="" disabled selected>Choisir…</option>
+          <option>Vidéo événementielle</option>
+          <option>Shooting photo</option>
+          <option>Vidéo corporate</option>
+          <option>Projet artistique</option>
+        </select>
+
+        <label for="date">Date / période</label>
+        <input id="date" name="date" placeholder="Ex : 12 février / semaine du 10…" />
+
+        <label for="lieu">Lieu</label>
+        <input id="lieu" name="lieu" placeholder="Ex : Toulouse / Bordeaux…" />
+
+        <label for="message">Détails</label>
+        <textarea id="message" name="message" placeholder="Décrivez le projet en quelques lignes…"></textarea>
+
+        <div class="hr"></div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <button class="btn primary" type="submit">Envoyer la demande</button>
+          <a class="btn" href="./services.html">Retour services</a>
+        </div>
+
+        <p class="note" style="margin-top:12px">
+          Maquette : ce formulaire redirige vers une page “Merci”. Dans Wix, on branchera l’envoi réel + emails automatiques.
+        </p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div>Besoin d’un exemple ? <a href="./service-video.html"><strong>Voir un service type</strong></a></div>
+      <div class="note">Version de travail – structure en cours de validation.</div>
+    </footer>
+  </div>
+</body>
+</html>
